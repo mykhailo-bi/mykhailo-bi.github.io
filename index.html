@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acme Commerce — Home</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-all">Search products</label>
+          <input id="search-all" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="login.html" class="link-muted">Login</a>
+          <a href="register.html" class="btn btn-ghost">Sign up</a>
+          <a href="cart.html" class="pill">Cart (3)</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a class="active" href="catalog.html">Catalog</a>
+        <a href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__content">
+        <div class="hero__text">
+          <p class="eyebrow">New season</p>
+          <h1>Everything you need to launch your store</h1>
+          <p class="lead">Modern catalog, smooth checkout, order tracking, and admin workflows. All screens are ready to connect to your backend.</p>
+          <div class="hero__actions">
+            <a class="btn btn-primary" href="catalog.html">Browse catalog</a>
+            <a class="btn btn-secondary" href="register.html">Create account</a>
+          </div>
+          <div class="hero__meta">
+            <div><strong>2K+</strong><span>Products</span></div>
+            <div><strong>48h</strong><span>Delivery</span></div>
+            <div><strong>4.9★</strong><span>Reviews</span></div>
+          </div>
+        </div>
+        <div class="hero__card">
+          <h2>Featured bundle</h2>
+          <div class="product-mini">
+            <img src="https://picsum.photos/seed/featured-bundle/420/260" alt="Featured bundle">
+            <div>
+              <p class="label">Limited</p>
+              <h3>Creator Starter Pack</h3>
+              <p class="price">$289.00</p>
+              <p class="muted">Includes mic, lighting, and studio accessories.</p>
+              <div class="actions-inline">
+                <a class="btn btn-primary" href="product.html">View details</a>
+                <a class="btn btn-ghost" href="cart.html">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <header class="section__header">
+        <div>
+          <p class="eyebrow">Shop by category</p>
+          <h2>Browse curated collections</h2>
+        </div>
+        <a href="catalog.html" class="link">View all</a>
+      </header>
+      <div class="grid grid-4">
+        <article class="card category">
+          <h3>Electronics</h3>
+          <p>Phones, laptops, audio, accessories</p>
+        </article>
+        <article class="card category">
+          <h3>Home & Living</h3>
+          <p>Furniture, decor, smart home</p>
+        </article>
+        <article class="card category">
+          <h3>Fashion</h3>
+          <p>Men, women, kids, activewear</p>
+        </article>
+        <article class="card category">
+          <h3>Beauty</h3>
+          <p>Skincare, hair, wellness</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section">
+      <header class="section__header">
+        <div>
+          <p class="eyebrow">Trending</p>
+          <h2>Featured products</h2>
+        </div>
+        <div class="actions-inline">
+          <a class="btn btn-ghost" href="wishlist.html">Save for later</a>
+          <a class="btn btn-primary" href="catalog.html">See catalog</a>
+        </div>
+      </header>
+      <div class="grid grid-3">
+        <article class="card product">
+          <img src="https://picsum.photos/seed/noise-cancelling-headphones/320/220" alt="Noise-cancelling headphones">
+          <div class="card__body">
+            <p class="label">Audio</p>
+            <h3><a href="product.html">Noise-cancelling Headphones</a></h3>
+            <p class="price">$199.00</p>
+            <p class="muted">Ships today · 2-year warranty</p>
+            <div class="actions-inline">
+              <a class="btn btn-primary" href="product.html">Add to cart</a>
+              <a class="btn btn-ghost" href="wishlist.html">Wishlist</a>
+            </div>
+          </div>
+        </article>
+        <article class="card product">
+          <img src="https://picsum.photos/seed/ergonomic-chair/320/220" alt="Ergonomic chair">
+          <div class="card__body">
+            <p class="label">Home</p>
+            <h3><a href="product.html">Ergonomic Chair</a></h3>
+            <p class="price">$329.00</p>
+            <p class="muted">Free returns · 5 colorways</p>
+            <div class="actions-inline">
+              <a class="btn btn-primary" href="product.html">Add to cart</a>
+              <a class="btn btn-ghost" href="wishlist.html">Wishlist</a>
+            </div>
+          </div>
+        </article>
+        <article class="card product">
+          <img src="https://picsum.photos/seed/smartwatch/320/220" alt="Smartwatch">
+          <div class="card__body">
+            <p class="label">Wearables</p>
+            <h3><a href="product.html">Smartwatch Pro</a></h3>
+            <p class="price">$249.00</p>
+            <p class="muted">GPS · ECG · 7-day battery</p>
+            <div class="actions-inline">
+              <a class="btn btn-primary" href="product.html">Add to cart</a>
+              <a class="btn btn-ghost" href="wishlist.html">Wishlist</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section section--muted">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Why shop with us</p>
+          <h2>Reliable operations ready for backend integration</h2>
+          <ul class="bullets">
+            <li>Account, wishlist, and orders screens mirror backend flows.</li>
+            <li>Checkout covers shipping, delivery, payment, and review.</li>
+            <li>Admin dashboard includes product, order, and user management forms.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Support</h3>
+          <p>Need help connecting to your API? Use the provided forms and tables to wire up AJAX later.</p>
+          <div class="contact">
+            <p class="muted">Email</p>
+            <p>support@acme-commerce.test</p>
+            <p class="muted">Phone</p>
+            <p>+1 (555) 555-1234</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

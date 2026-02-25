@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — Acme Commerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-product">Search products</label>
+          <input id="search-product" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="login.html" class="link-muted">Login</a>
+          <a href="register.html" class="btn btn-ghost">Sign up</a>
+          <a href="cart.html" class="pill">Cart (3)</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a href="catalog.html">Catalog</a>
+        <a href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="catalog.html">Electronics</a>
+      <span>/</span>
+      <span>Noise-cancelling Headphones</span>
+    </nav>
+
+    <div class="split" style="margin-top:1rem; align-items:start;">
+      <div class="card">
+        <img src="https://picsum.photos/seed/noise-cancelling-headphones-main/680/480" alt="Noise-cancelling headphones">
+      </div>
+      <div class="card">
+        <p class="label">Audio</p>
+        <h1>Noise-cancelling Headphones</h1>
+        <p class="price">$199.00</p>
+        <p class="muted">Ships today · 2-year warranty</p>
+        <p>Premium over-ear headphones with hybrid ANC, Bluetooth 5.3, 40-hour battery life, and multipoint pairing.</p>
+        <div class="pillbar">
+          <span class="tag">Free shipping</span>
+          <span class="tag">24h dispatch</span>
+          <span class="tag">Returns 30d</span>
+        </div>
+        <form class="stack" action="#">
+          <label for="quantity">Quantity</label>
+          <input id="quantity" name="quantity" type="number" value="1" min="1">
+          <div class="actions-inline">
+            <button class="btn btn-primary" type="submit">Add to cart</button>
+            <a class="btn btn-ghost" href="wishlist.html">Add to wishlist</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <section class="section-tight">
+      <nav class="pill-nav" aria-label="Product sections">
+        <a class="active" aria-current="page" href="#">Description</a>
+        <a href="#">Specifications</a>
+        <a href="#">Shipping</a>
+        <a href="#">Reviews (128)</a>
+      </nav>
+    </section>
+
+    <section class="grid grid-2 section-tight">
+      <article class="card">
+        <h3>Product description</h3>
+        <p>Experience deep, immersive sound with adaptive ANC and soft memory foam ear cushions for all-day comfort.</p>
+        <ul class="bullets">
+          <li>Hybrid active noise cancellation</li>
+          <li>40h battery with quick charge</li>
+          <li>Multipoint Bluetooth pairing</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Shipping & returns</h3>
+        <p class="muted">Backend-ready copy block to display shipping policies.</p>
+        <p>Standard: 3-5 business days. Express: 1-2 business days.</p>
+        <p>Free returns within 30 days.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <header class="section__header">
+        <div>
+          <p class="eyebrow">Related</p>
+          <h2>You may also like</h2>
+        </div>
+      </header>
+      <div class="grid grid-3">
+        <article class="card product">
+          <img src="https://picsum.photos/seed/wireless-earbuds/320/220" alt="Wireless earbuds">
+          <div class="card__body">
+            <p class="label">Audio</p>
+            <h3><a href="product.html">Wireless Earbuds</a></h3>
+            <p class="price">$129.00</p>
+            <p class="muted">Fast pairing · IPX4</p>
+          </div>
+        </article>
+        <article class="card product">
+          <img src="https://picsum.photos/seed/bluetooth-speaker/320/220" alt="Bluetooth speaker">
+          <div class="card__body">
+            <p class="label">Audio</p>
+            <h3><a href="product.html">Bluetooth Speaker</a></h3>
+            <p class="price">$89.00</p>
+            <p class="muted">12h battery · Waterproof</p>
+          </div>
+        </article>
+        <article class="card product">
+          <img src="https://picsum.photos/seed/dac-amp/320/220" alt="DAC/Amp">
+          <div class="card__body">
+            <p class="label">Audio</p>
+            <h3><a href="product.html">USB-C DAC/Amp</a></h3>
+            <p class="price">$59.00</p>
+            <p class="muted">Hi-Res · Low latency</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

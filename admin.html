@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Acme Commerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-all">Search products</label>
+          <input id="search-all" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="login.html" class="link-muted">Login</a>
+          <a href="register.html" class="btn btn-ghost">Sign up</a>
+          <a href="cart.html" class="pill">Cart (3)</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a href="catalog.html">Catalog</a>
+        <a href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a class="active" href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="sub-nav container" aria-label="Admin">
+    <a class="active" href="admin.html">Dashboard</a>
+    <a href="admin-products.html">Products</a>
+    <a href="admin-orders.html">Orders</a>
+    <a href="admin-users.html">Users</a>
+  </nav>
+
+  <main class="container section admin">
+    <header class="section__header">
+      <div>
+        <p class="eyebrow">Admin</p>
+        <h1>Dashboard</h1>
+      </div>
+      <nav class="pill-nav" aria-label="Admin sections">
+        <a class="active" aria-current="page" href="admin.html">Dashboard</a>
+        <a href="admin-products.html">Products</a>
+        <a href="admin-orders.html">Orders</a>
+        <a href="admin-users.html">Users</a>
+      </nav>
+    </header>
+
+    <section class="dashboard-grid">
+      <article class="stat">
+        <p class="muted">Revenue (MTD)</p>
+        <h2>$128,420</h2>
+        <p class="status status-success">+12.4% vs last month</p>
+      </article>
+      <article class="stat">
+        <p class="muted">Orders</p>
+        <h2>1,284</h2>
+        <p class="status status-info">+4.2% vs last month</p>
+      </article>
+      <article class="stat">
+        <p class="muted">Refunds</p>
+        <h2>32</h2>
+        <p class="status status-warning">+2 pending</p>
+      </article>
+      <article class="stat">
+        <p class="muted">Inventory risk</p>
+        <h2>18 SKUs</h2>
+        <p class="status status-danger">Reorder soon</p>
+      </article>
+    </section>
+
+    <section class="grid grid-2" style="margin-top:1.5rem;">
+      <article class="card" aria-label="Recent orders">
+        <div class="card__header">
+          <div>
+            <p class="eyebrow">Orders</p>
+            <h2>Recent orders</h2>
+          </div>
+          <div class="actions-inline">
+            <a class="btn btn-ghost" href="#">Export</a>
+            <a class="btn btn-primary" href="#">New order</a>
+          </div>
+        </div>
+        <table class="table table--spacious" aria-label="Recent orders">
+          <thead>
+            <tr>
+              <th scope="col">Order</th>
+              <th scope="col">Status</th>
+              <th scope="col">Total</th>
+              <th scope="col" class="actions-col"><span class="sr-only">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#AC-48291</td>
+              <td><span class="status status-info">Processing</span></td>
+              <td>$385.56</td>
+              <td>
+                <a class="btn btn-ghost" href="order.html">View</a>
+                <a class="btn btn-ghost" href="#">Invoice</a>
+              </td>
+            </tr>
+            <tr>
+              <td>#AC-48212</td>
+              <td><span class="status status-success">Delivered</span></td>
+              <td>$129.00</td>
+              <td>
+                <a class="btn btn-ghost" href="order.html">View</a>
+                <a class="btn btn-ghost" href="#">Invoice</a>
+              </td>
+            </tr>
+            <tr>
+              <td>#AC-48190</td>
+              <td><span class="status status-warning">Awaiting payment</span></td>
+              <td>$59.00</td>
+              <td>
+                <a class="btn btn-ghost" href="order.html">View</a>
+                <a class="btn btn-ghost" href="#">Pay</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="card" aria-label="Alerts">
+        <div class="card__header">Alerts</div>
+        <ul class="bullets">
+          <li>Reorder stock for 18 SKUs below threshold.</li>
+          <li>2 refunds pending approval.</li>
+          <li>Update compliance docs for EU region.</li>
+        </ul>
+        <div class="actions-inline">
+          <a class="btn btn-primary" href="admin-orders.html">Go to orders</a>
+          <a class="btn btn-ghost" href="admin-products.html">View inventory</a>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

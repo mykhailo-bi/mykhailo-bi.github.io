@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acme Commerce — Catalog</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="has-sidebar">
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-catalog">Search products</label>
+          <input id="search-catalog" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="login.html" class="link-muted">Login</a>
+          <a href="register.html" class="btn btn-ghost">Sign up</a>
+          <a href="cart.html" class="pill">Cart (3)</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a class="active" href="catalog.html">Catalog</a>
+        <a href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <aside class="sidebar" aria-label="Filters">
+      <div class="card">
+        <div class="card__header">Filters</div>
+        <form class="stack" action="#">
+          <fieldset class="stack-sm">
+            <legend>Price</legend>
+            <label class="stack-xxs" for="price-min">Min</label>
+            <input id="price-min" type="number" name="min" placeholder="0">
+            <label class="stack-xxs" for="price-max">Max</label>
+            <input id="price-max" type="number" name="max" placeholder="500">
+          </fieldset>
+          <fieldset class="stack-sm">
+            <legend>Categories</legend>
+            <label class="checkbox"><input type="checkbox" checked> Electronics</label>
+            <label class="checkbox"><input type="checkbox"> Home</label>
+            <label class="checkbox"><input type="checkbox"> Fashion</label>
+            <label class="checkbox"><input type="checkbox"> Beauty</label>
+          </fieldset>
+          <fieldset class="stack-sm">
+            <legend>Availability</legend>
+            <label class="checkbox"><input type="checkbox" checked> In stock</label>
+            <label class="checkbox"><input type="checkbox"> Preorder</label>
+          </fieldset>
+          <button type="submit" class="btn btn-primary">Apply filters</button>
+        </form>
+      </div>
+    </aside>
+
+    <section class="content" aria-label="Catalog results">
+      <header class="section__header">
+        <div>
+          <p class="eyebrow">Catalog</p>
+          <h1>Showing 36 results</h1>
+        </div>
+        <form class="inline-form" action="#">
+          <label for="sort">Sort</label>
+          <select id="sort" name="sort">
+            <option>Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest</option>
+          </select>
+          <label for="per-page">Per page</label>
+          <select id="per-page" name="per_page">
+            <option>12</option>
+            <option>24</option>
+            <option>36</option>
+          </select>
+        </form>
+      </header>
+
+      <div class="grid grid-3">
+        <article class="card product">
+          <img src="https://picsum.photos/seed/4k-monitor/320/220" alt="4K Monitor">
+          <div class="card__body">
+            <p class="label">Displays</p>
+            <h3><a href="product.html">4K Monitor</a></h3>
+            <p class="price">$449.00</p>
+            <p class="muted">Ready to ship</p>
+            <div class="actions-inline">
+              <a class="btn btn-primary" href="product.html">Add to cart</a>
+              <a class="btn btn-ghost" href="wishlist.html">Wishlist</a>
+            </div>
+          </div>
+        </article>
+        <article class="card product">
+          <img src="https://picsum.photos/seed/desk-lamp/320/220" alt="Desk lamp">
+          <div class="card__body">
+            <p class="label">Home</p>
+            <h3><a href="product.html">Smart Desk Lamp</a></h3>
+            <p class="price">$79.00</p>
+            <p class="muted">Backorder · Ships in 5 days</p>
+            <div class="actions-inline">
+              <a class="btn btn-primary" href="product.html">Add to cart</a>
+              <a class="btn btn-ghost" href="wishlist.html">Wishlist</a>
+            </div>
+          </div>
+        </article>
+        <article class="card product">
+          <img src="https://picsum.photos/seed/running-shoes/320/220" alt="Running shoes">
+          <div class="card__body">
+            <p class="label">Footwear</p>
+            <h3><a href="product.html">Running Shoes</a></h3>
+            <p class="price">$129.00</p>
+            <p class="muted">Free returns</p>
+            <div class="actions-inline">
+              <a class="btn btn-primary" href="product.html">Add to cart</a>
+              <a class="btn btn-ghost" href="wishlist.html">Wishlist</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="pagination">
+        <button class="btn btn-ghost" type="button">Previous</button>
+        <div class="page-numbers" aria-label="Pagination">
+          <a class="active" href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+        </div>
+        <button class="btn btn-ghost" type="button">Next</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

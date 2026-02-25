@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logout — Acme Commerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-logout">Search products</label>
+          <input id="search-logout" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="login.html" class="link-muted">Login</a>
+          <a href="register.html" class="btn btn-ghost">Sign up</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a href="catalog.html">Catalog</a>
+        <a href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section auth-page" style="max-width:720px;">
+    <div class="auth-card" style="text-align:center; gap:0.75rem;">
+      <p class="eyebrow">Session</p>
+      <h1>Logout</h1>
+      <p class="muted">You are about to end your session. This static screen will become a framework route later.</p>
+      <div class="actions-inline" style="justify-content:center;">
+        <a class="btn btn-primary" href="login.html">Confirm logout</a>
+        <a class="btn btn-ghost" href="index.html">Stay signed in</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

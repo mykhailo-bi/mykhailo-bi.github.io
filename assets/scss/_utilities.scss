@@ -1,0 +1,58 @@
+@use "variables" as *;
+
+.link {
+  color: $color-primary;
+  font-weight: 600;
+}
+
+.link-muted {
+  color: $color-muted;
+
+  &:hover {
+    color: $color-text;
+  }
+}
+
+.section-tight {
+  padding: 1rem 0;
+}
+
+.bullets {
+  padding-left: 1rem;
+  color: $color-muted;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.newsletter {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.newsletter__controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pillbar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 0.3rem 0.6rem;
+  border-radius: $radius-sm;
+  background: rgba($color-border, 0.8);
+  color: $color-muted;
+  }
+
+.alert-grid {
+  display: grid;
+  gap: 0.75rem;
+}

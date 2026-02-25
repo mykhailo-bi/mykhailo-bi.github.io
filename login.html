@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Acme Commerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-login">Search products</label>
+          <input id="search-login" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="register.html" class="btn btn-ghost">Sign up</a>
+          <a href="cart.html" class="pill">Cart</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a href="catalog.html">Catalog</a>
+        <a href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section auth-page" style="max-width:760px;">
+    <div class="auth-card">
+      <p class="eyebrow">Welcome back</p>
+      <h1>Login</h1>
+      <form class="stack" action="#">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required autocomplete="current-password">
+        <div class="actions-inline" style="justify-content:space-between; align-items:center;">
+          <label class="checkbox"><input type="checkbox" name="remember"> Remember me</label>
+          <a class="link" href="forgot-password.html">Forgot password?</a>
+        </div>
+        <button class="btn btn-primary" type="submit">Login</button>
+      </form>
+      <p class="muted">No account? <a class="link" href="register.html">Create one</a></p>
+    </div>
+  </main>
+</body>
+</html>

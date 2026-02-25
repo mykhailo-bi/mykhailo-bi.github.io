@@ -1,0 +1,191 @@
+@use "variables" as *;
+@use "mixins";
+
+.btn {
+  @include mixins.button-base;
+
+  &.btn-primary {
+    background: $color-primary;
+    color: $color-bg;
+    box-shadow: $shadow-sm;
+
+    &:hover {
+      box-shadow: $shadow-md;
+      background: lighten($color-primary, 4%);
+    }
+  }
+
+  &.btn-secondary {
+    background: rgba($color-primary, 0.14);
+    border-color: rgba($color-primary, 0.32);
+    color: $color-text;
+
+    &:hover { background: rgba($color-primary, 0.22); }
+  }
+
+  &.btn-ghost {
+    background: rgba($color-border, 0.6);
+    border-color: $color-border;
+    color: $color-text;
+
+    &:hover { border-color: rgba($color-primary, 0.45); }
+  }
+}
+
+.pill { @include mixins.pill; }
+
+.card {
+  @include mixins.card;
+  padding: 1.1rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.card__header {
+  @include mixins.flex-between;
+  gap: 0.75rem;
+  font-weight: 700;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: 0.5rem;
+}
+
+.card__footer {
+  border-top: 1px solid $color-border;
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.card__body {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.category {
+  background: linear-gradient(160deg, rgba($color-primary, 0.18), rgba($color-primary, 0.12));
+  border: 1px solid rgba($color-border, 0.8);
+  border-radius: $radius;
+  padding: 1.2rem;
+  box-shadow: $shadow-sm;
+}
+
+.product img {
+  border-radius: $radius;
+}
+
+.actions-inline {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.breadcrumbs {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  color: $color-muted;
+
+  a {
+    color: inherit;
+    &:hover { color: $color-primary; }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+
+  .page-numbers {
+    display: inline-flex;
+    gap: 0.4rem;
+
+    a {
+      min-width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid $color-border;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-muted;
+
+      &.active,
+      &:hover {
+        color: $color-text;
+        border-color: $color-primary;
+      }
+    }
+  }
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid $color-border;
+  margin: 0.5rem 0;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 1px solid $color-border;
+
+  &.status-success { color: $color-success; border-color: rgba($color-success, 0.35); }
+  &.status-warning { color: $color-accent; border-color: rgba($color-accent, 0.35); }
+  &.status-danger { color: $color-danger; border-color: rgba($color-danger, 0.35); }
+  &.status-info { color: $color-primary; border-color: rgba($color-primary, 0.35); }
+  &.status-muted { color: $color-muted; border-color: rgba($color-border, 0.6); }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: $radius-sm;
+  background: rgba($color-border, 0.8);
+  color: $color-muted;
+  font-size: 0.85rem;
+}
+
+
+.pill-nav {
+  display: inline-flex;
+  gap: 0.5rem;
+  border: 1px solid $color-border;
+  border-radius: 999px;
+  padding: 0.25rem;
+
+  a,
+  span {
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    color: $color-muted;
+    text-decoration: none;
+
+    &.active,
+    &[aria-current],
+    &:hover {
+      background: rgba($color-primary, 0.16);
+      color: $color-text;
+    }
+  }
+}
+
+.toast {
+  @include mixins.card;
+  display: grid;
+  gap: 0.3rem;
+  padding: 1rem;
+  border-left: 4px solid $color-primary;
+  &.toast-error { border-left-color: $color-danger; }
+  &.toast-success { border-left-color: $color-success; }
+  &.toast-warning { border-left-color: $color-accent; }
+}

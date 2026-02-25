@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Acme Commerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-checkout">Search products</label>
+          <input id="search-checkout" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="login.html" class="link-muted">Login</a>
+          <a href="register.html" class="btn btn-ghost">Sign up</a>
+          <a href="cart.html" class="pill">Cart (3)</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a href="catalog.html">Catalog</a>
+        <a href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+    <main class="container section checkout">
+      <header class="section__header">
+        <div>
+          <p class="eyebrow">Checkout</p>
+          <h1>Complete your order</h1>
+        </div>
+        <nav class="pill-nav" aria-label="Checkout steps">
+          <span aria-current="step" class="active">Shipping</span>
+          <span>Delivery</span>
+          <span>Payment</span>
+          <span>Review</span>
+        </nav>
+      </header>
+
+      <div class="split" style="align-items:start;">
+        <section class="checkout-card" aria-label="Checkout form">
+          <form class="checkout-steps stack" aria-label="Complete checkout">
+            <fieldset class="stack" aria-label="Shipping address">
+              <h3>Shipping address</h3>
+              <div class="form-grid">
+                <div>
+                  <label for="first-name">First name</label>
+                <input id="first-name" name="first_name" autocomplete="given-name" required>
+              </div>
+              <div>
+                <label for="last-name">Last name</label>
+                <input id="last-name" name="last_name" autocomplete="family-name" required>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel">
+              </div>
+              <div>
+                <label for="address">Address</label>
+                <input id="address" name="address" autocomplete="street-address" required>
+              </div>
+              <div>
+                <label for="city">City</label>
+                <input id="city" name="city" autocomplete="address-level2" required>
+              </div>
+              <div>
+                <label for="country">Country</label>
+                <input id="country" name="country" autocomplete="country" required>
+              </div>
+                <div>
+                  <label for="zip">ZIP</label>
+                  <input id="zip" name="zip" autocomplete="postal-code" required>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="stack" aria-label="Delivery method">
+              <h3>Delivery method</h3>
+              <label class="checkbox"><input type="radio" name="delivery" checked> Standard · 3-5 days (Free)</label>
+              <label class="checkbox"><input type="radio" name="delivery"> Express · 1-2 days ($15)</label>
+              <label class="checkbox"><input type="radio" name="delivery"> Pickup point (Free)</label>
+            </fieldset>
+
+            <fieldset class="stack" aria-label="Payment method">
+              <h3>Payment</h3>
+              <label class="checkbox"><input type="radio" name="payment" checked> Card · **** 4242</label>
+              <label class="checkbox"><input type="radio" name="payment"> PayPal</label>
+              <label class="checkbox"><input type="radio" name="payment"> Cash on delivery</label>
+              <div class="form-grid">
+              <div>
+                <label for="card-name">Name on card</label>
+                <input id="card-name" name="card_name" autocomplete="cc-name">
+              </div>
+              <div>
+                <label for="card-number">Card number</label>
+                <input id="card-number" name="card_number" inputmode="numeric" autocomplete="cc-number">
+              </div>
+              <div>
+                <label for="exp">Exp date</label>
+                <input id="exp" name="exp" placeholder="MM/YY" autocomplete="cc-exp">
+              </div>
+                <div>
+                  <label for="cvc">CVC</label>
+                  <input id="cvc" name="cvc" autocomplete="cc-csc">
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="actions-inline" style="justify-content:flex-end;">
+              <a class="btn btn-ghost" href="cart.html">Back to cart</a>
+              <button class="btn btn-primary" type="submit">Place order</button>
+            </div>
+          </form>
+        </section>
+
+      <aside class="checkout-card" aria-label="Order summary">
+        <div class="card__header">Order summary</div>
+        <div class="summary">
+          <div class="actions-inline" style="justify-content:space-between;">
+            <span>Items</span><strong>$357.00</strong>
+          </div>
+          <div class="actions-inline" style="justify-content:space-between;">
+            <span>Shipping</span><span class="muted">Calculated</span>
+          </div>
+          <div class="actions-inline" style="justify-content:space-between;">
+            <span>Taxes</span><span class="muted">$28.56 est.</span>
+          </div>
+          <hr class="divider">
+          <div class="actions-inline" style="justify-content:space-between;">
+            <span>Total</span><strong>$385.56</strong>
+          </div>
+        </div>
+        <div class="card__footer">
+          <a class="btn btn-primary" href="order-confirmation.html">Confirm order</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  </body>
+</html>

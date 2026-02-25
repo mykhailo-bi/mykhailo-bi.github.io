@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation — Acme Commerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-confirm">Search products</label>
+          <input id="search-confirm" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="orders.html" class="pill">Orders</a>
+          <a href="account.html" class="link-muted">Account</a>
+          <a href="cart.html" class="pill">Cart</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a href="catalog.html">Catalog</a>
+        <a class="active" href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="card" style="text-align:center; gap:0.6rem;">
+      <p class="eyebrow">Thank you</p>
+      <h1>Order confirmed</h1>
+      <p class="muted">Order #AC-48291 · We emailed your receipt and will notify you when items ship.</p>
+      <div class="actions-inline" style="justify-content:center;">
+        <a class="btn btn-primary" href="orders.html">View orders</a>
+        <a class="btn btn-ghost" href="catalog.html">Continue shopping</a>
+      </div>
+    </div>
+
+    <div class="split" style="margin-top:1.5rem; align-items:start;">
+      <section class="card order-summary" aria-label="Order summary">
+        <div class="card__header">Order summary</div>
+        <div class="mini-table">
+          <div class="actions-inline" style="justify-content:space-between;">
+            <span>Items</span><strong>$357.00</strong>
+          </div>
+          <div class="actions-inline" style="justify-content:space-between;">
+            <span>Shipping</span><span class="muted">Standard</span>
+          </div>
+          <div class="actions-inline" style="justify-content:space-between;">
+            <span>Taxes</span><span>$28.56</span>
+          </div>
+          <hr class="divider">
+          <div class="actions-inline" style="justify-content:space-between;">
+            <span>Total</span><strong>$385.56</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" aria-label="Shipping and payment">
+        <div class="card__header">Delivery</div>
+        <p><strong>Shipping to</strong><br> Jane Doe<br> 123 Market St<br> Berlin, 10115<br> Germany</p>
+        <p><strong>Delivery method</strong><br> Standard · 3-5 business days</p>
+        <p><strong>Payment</strong><br> Visa · · · · 4242</p>
+      </section>
+    </div>
+
+    <section class="section-tight">
+      <h3>Order timeline</h3>
+      <div class="timeline">
+        <div><strong>Confirmed</strong> — Just now</div>
+        <div><strong>Preparing</strong> — ETA today</div>
+        <div class="muted">Shipped — Pending</div>
+        <div class="muted">Delivered — Pending</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

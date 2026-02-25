@@ -1,0 +1,71 @@
+@use "variables" as *;
+
+@mixin card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  box-shadow: $shadow-sm;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin focus-ring {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}
+
+@mixin pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba($color-primary, 0.12);
+  color: $color-text;
+  border: 1px solid rgba($color-primary, 0.35);
+}
+
+@mixin input-base {
+  width: 100%;
+  padding: 0.85rem 0.95rem;
+  border-radius: $radius-sm;
+  border: 1px solid $color-border;
+  background: #0f1118;
+  color: $color-text;
+  transition: border-color $transition, box-shadow $transition;
+
+  &:focus {
+    border-color: $color-primary;
+    box-shadow: 0 0 0 3px rgba($color-primary, 0.22);
+  }
+
+  &::placeholder {
+    color: $color-muted;
+  }
+}
+
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border-radius: $radius-sm;
+  padding: 0.75rem 1.1rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform $transition, box-shadow $transition, background $transition, border-color $transition;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}

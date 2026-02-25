@@ -1,0 +1,220 @@
+@use "variables" as *;
+@use "mixins";
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(11, 12, 16, 0.98) 0%, rgba(11, 12, 16, 0.94) 100%);
+  border-bottom: 1px solid $color-border;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.28);
+}
+
+.nav-shell {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.85rem 0 1.1rem;
+}
+
+.topbar {
+  @include mixins.flex-between;
+  gap: 1rem;
+  align-items: center;
+
+  .brand {
+    font-weight: 800;
+    font-size: 1.35rem;
+    color: $color-text;
+    letter-spacing: -0.01em;
+  }
+
+  .top-actions {
+    display: flex;
+    gap: 0.65rem;
+    align-items: center;
+
+    .link-muted {
+      color: $color-muted;
+      font-weight: 600;
+
+      &:hover { color: $color-text; }
+    }
+  }
+}
+
+.search {
+  display: flex;
+  gap: 0.45rem;
+  flex: 1;
+  align-items: stretch;
+
+  input {
+    flex: 1;
+    padding: 0.9rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba($color-border, 0.9);
+    background: #0f1118;
+    color: $color-text;
+    transition: border-color $transition, box-shadow $transition;
+
+    &:focus {
+      border-color: rgba($color-primary, 0.8);
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.18);
+      outline: none;
+    }
+  }
+
+  .btn {
+    padding: 0.85rem 1.1rem;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+}
+
+.primary-nav {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.1rem 0 0.2rem;
+  font-weight: 650;
+  align-items: center;
+
+  a {
+    padding: 0.55rem 1.05rem;
+    border-radius: $radius-sm;
+    color: $color-muted;
+    transition: background $transition, color $transition, box-shadow $transition;
+
+    &.active,
+    &:hover {
+      background: linear-gradient(135deg, rgba($color-primary, 0.24), rgba($color-primary, 0.18));
+      color: $color-text;
+      box-shadow: 0 6px 20px rgba($color-primary, 0.35);
+    }
+  }
+}
+
+.sub-nav {
+  display: flex;
+  gap: 0.9rem;
+  padding: 0.5rem 0 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid $color-border;
+
+  a {
+    padding: 0.35rem 0.75rem;
+    border-radius: $radius-sm;
+    color: $color-muted;
+
+    &.active,
+    &:hover {
+      background: rgba($color-primary, 0.15);
+      color: $color-text;
+    }
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0 3rem;
+}
+
+.sidebar {
+  position: sticky;
+  top: 90px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section--muted {
+  background: rgba($color-border, 0.3);
+  border-radius: $radius;
+  padding: 3rem;
+}
+
+.section__header {
+  @include mixins.flex-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+
+  &.grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+  &.grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  &.grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.site-footer {
+  margin-top: 3rem;
+  border-top: 1px solid $color-border;
+  background: $color-surface;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.hero {
+  padding: 3.5rem 0;
+  background: linear-gradient(120deg, rgba($color-primary, 0.12), rgba($color-primary, 0.06));
+  border-bottom: 1px solid $color-border;
+}
+
+.hero__content {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+}
+
+.hero__text {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hero__meta {
+  display: flex;
+  gap: 1.5rem;
+  color: $color-muted;
+
+  div {
+    display: grid;
+    gap: 0.2rem;
+  }
+}
+
+.hero__card {
+  @include mixins.card;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}

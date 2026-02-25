@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Products — Acme Commerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-all">Search products</label>
+          <input id="search-all" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="login.html" class="link-muted">Login</a>
+          <a href="register.html" class="btn btn-ghost">Sign up</a>
+          <a href="cart.html" class="pill">Cart (3)</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a href="catalog.html">Catalog</a>
+        <a href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a class="active" href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="sub-nav container" aria-label="Admin">
+    <a href="admin.html">Dashboard</a>
+    <a class="active" href="admin-products.html">Products</a>
+    <a href="admin-orders.html">Orders</a>
+    <a href="admin-users.html">Users</a>
+  </nav>
+
+  <main class="container section admin">
+    <header class="section__header">
+      <div>
+        <p class="eyebrow">Admin</p>
+        <h1>Products</h1>
+      </div>
+    </header>
+
+    <div class="admin-stack">
+      <section class="admin-card" aria-label="Product form">
+        <div class="card__header">
+          <div>
+            <p class="eyebrow">Products</p>
+            <h2>Create / edit product</h2>
+            <p class="muted">Add new inventory or update existing items.</p>
+          </div>
+          <div class="actions-inline">
+            <a class="btn btn-ghost" href="#">Import CSV</a>
+            <a class="btn btn-primary" href="#">Add product</a>
+          </div>
+        </div>
+        <form class="stack" action="#">
+          <label for="title">Title</label>
+          <input id="title" name="title" required>
+          <label for="sku">SKU</label>
+          <input id="sku" name="sku" required>
+          <div class="form-grid">
+            <div>
+              <label for="price">Price</label>
+              <input id="price" name="price" type="number" step="0.01" required>
+            </div>
+            <div>
+              <label for="stock">Stock</label>
+              <input id="stock" name="stock" type="number" required>
+            </div>
+          </div>
+          <label for="category">Category</label>
+          <input id="category" name="category">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" rows="3"></textarea>
+          <div class="form-grid">
+            <label class="checkbox"><input type="checkbox" checked> Published</label>
+            <label class="checkbox"><input type="checkbox"> Featured</label>
+          </div>
+          <div class="card__footer">
+            <button class="btn btn-ghost" type="button">Cancel</button>
+            <button class="btn btn-primary" type="submit">Save product</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-card" aria-label="Product list">
+        <div class="card__header">
+          <div>
+            <p class="eyebrow">Inventory</p>
+            <h2>Products</h2>
+          </div>
+          <div class="actions-inline">
+            <a class="btn btn-ghost" href="#">Export</a>
+            <a class="btn btn-primary" href="#">Add product</a>
+          </div>
+        </div>
+        <table class="table table--spacious">
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">SKU</th>
+              <th scope="col">Price</th>
+              <th scope="col">Stock</th>
+              <th scope="col">Status</th>
+              <th scope="col" class="actions-col"><span class="sr-only">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Noise-cancelling Headphones</td>
+              <td>HD-123</td>
+              <td>$199.00</td>
+              <td>58</td>
+              <td><span class="status status-success">Published</span></td>
+              <td>
+                <a class="btn btn-ghost" href="product.html?sku=HD-123&mode=edit">Edit</a>
+                <a class="btn btn-ghost" href="admin-products.html?sku=HD-123&action=archive">Archive</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Smart Desk Lamp</td>
+              <td>DL-22</td>
+              <td>$79.00</td>
+              <td>12</td>
+              <td><span class="status status-warning">Low stock</span></td>
+              <td>
+                <a class="btn btn-ghost" href="product.html?sku=DL-22&mode=edit">Edit</a>
+                <a class="btn btn-ghost" href="admin-products.html?sku=DL-22&action=archive">Archive</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Running Shoes</td>
+              <td>RS-44</td>
+              <td>$129.00</td>
+              <td>0</td>
+              <td><span class="status status-danger">Out of stock</span></td>
+              <td>
+                <a class="btn btn-ghost" href="product.html?sku=RS-44&mode=edit">Edit</a>
+                <a class="btn btn-ghost" href="admin-products.html?sku=RS-44&action=archive">Archive</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

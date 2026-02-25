@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order details — Acme Commerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-order">Search products</label>
+          <input id="search-order" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="orders.html" class="pill">Orders</a>
+          <a href="account.html" class="link-muted">Account</a>
+          <a href="cart.html" class="pill">Cart</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a href="catalog.html">Catalog</a>
+        <a class="active" href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <header class="section__header">
+      <div>
+        <p class="eyebrow">Order</p>
+        <h1>Order #AC-48291</h1>
+        <p class="muted">Placed 2026-02-25</p>
+      </div>
+      <div class="actions-inline">
+        <a class="btn btn-ghost" href="#">Download invoice</a>
+        <a class="btn btn-primary" href="#">Contact support</a>
+      </div>
+    </header>
+
+    <div class="split" style="align-items:start;">
+      <section class="card" aria-label="Items">
+        <div class="card__header">Items</div>
+        <div class="stack">
+          <div class="card" style="padding:1rem;">
+            <div class="actions-inline" style="justify-content:space-between; width:100%;">
+              <div class="actions-inline">
+                <img src="https://picsum.photos/seed/headphones-order/110" alt="Headphones" style="border-radius:10px;">
+                <div>
+                  <h3>Noise-cancelling Headphones</h3>
+                  <p class="muted">Qty 1 · $199.00</p>
+                </div>
+              </div>
+              <span class="status status-info">Processing</span>
+            </div>
+          </div>
+          <div class="card" style="padding:1rem;">
+            <div class="actions-inline" style="justify-content:space-between; width:100%;">
+              <div class="actions-inline">
+                <img src="https://picsum.photos/seed/desk-lamp-order/110" alt="Desk lamp" style="border-radius:10px;">
+                <div>
+                  <h3>Smart Desk Lamp</h3>
+                  <p class="muted">Qty 2 · $79.00</p>
+                </div>
+              </div>
+              <span class="status status-success">Paid</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card" aria-label="Summary">
+        <div class="card__header">Summary</div>
+        <div class="mini-table">
+          <div class="actions-inline" style="justify-content:space-between;">
+            <span>Subtotal</span><strong>$357.00</strong>
+          </div>
+          <div class="actions-inline" style="justify-content:space-between;">
+            <span>Shipping</span><span class="muted">$0.00</span>
+          </div>
+          <div class="actions-inline" style="justify-content:space-between;">
+            <span>Taxes</span><span>$28.56</span>
+          </div>
+          <hr class="divider">
+          <div class="actions-inline" style="justify-content:space-between;">
+            <span>Total</span><strong>$385.56</strong>
+          </div>
+        </div>
+        <div class="card__footer">
+          <a class="btn btn-primary" href="#">Request refund</a>
+          <a class="btn btn-ghost" href="#">Track shipment</a>
+        </div>
+      </aside>
+    </div>
+
+    <section class="grid grid-2" style="margin-top:1.5rem;">
+      <article class="card" aria-label="Shipping">
+        <div class="card__header">Shipping</div>
+        <p>Jane Doe</p>
+        <p class="muted">123 Market St<br>Berlin, 10115<br>Germany</p>
+        <p><strong>Method</strong><br>Standard · 3-5 days</p>
+      </article>
+
+      <article class="card" aria-label="Payment">
+        <div class="card__header">Payment</div>
+        <p>Visa · · · · 4242</p>
+        <p class="muted">Paid 2026-02-25</p>
+        <a class="link" href="#">Download receipt</a>
+      </article>
+    </section>
+
+    <section class="section-tight">
+      <h3>Timeline</h3>
+      <div class="timeline">
+        <div><strong>Confirmed</strong> — 09:12</div>
+        <div><strong>Payment captured</strong> — 09:12</div>
+        <div><strong>Packed</strong> — Pending</div>
+        <div class="muted">Shipped — Pending</div>
+        <div class="muted">Delivered — Pending</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

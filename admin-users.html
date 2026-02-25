@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Users — Acme Commerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-all">Search products</label>
+          <input id="search-all" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="login.html" class="link-muted">Login</a>
+          <a href="register.html" class="btn btn-ghost">Sign up</a>
+          <a href="cart.html" class="pill">Cart (3)</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a href="catalog.html">Catalog</a>
+        <a href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a class="active" href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="sub-nav container" aria-label="Admin">
+    <a href="admin.html">Dashboard</a>
+    <a href="admin-products.html">Products</a>
+    <a href="admin-orders.html">Orders</a>
+    <a class="active" href="admin-users.html">Users</a>
+  </nav>
+
+  <main class="container section admin">
+    <header class="section__header">
+      <div>
+        <p class="eyebrow">Admin</p>
+        <h1>Users</h1>
+      </div>
+      <div class="actions-inline">
+        <a class="btn btn-ghost" href="#">Invite user</a>
+        <a class="btn btn-primary" href="#">Create user</a>
+      </div>
+    </header>
+
+    <div class="admin-stack">
+      <section class="admin-card" aria-label="Create user">
+        <div class="card__header">
+          <div>
+            <p class="eyebrow">Users</p>
+            <h2>Create / edit user</h2>
+            <p class="muted">Invite a new teammate or update an existing account.</p>
+          </div>
+          <div class="actions-inline">
+            <a class="btn btn-ghost" href="#">Import CSV</a>
+            <a class="btn btn-primary" href="#">Send invite</a>
+          </div>
+        </div>
+        <form class="stack" action="#">
+          <label for="name">Full name</label>
+          <input id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <div class="form-grid">
+            <div>
+              <label for="role">Role</label>
+              <select id="role" name="role">
+                <option>Customer</option>
+                <option>Manager</option>
+                <option>Admin</option>
+              </select>
+            </div>
+            <div>
+              <label for="status">Status</label>
+              <select id="status" name="status">
+                <option>Active</option>
+                <option>Suspended</option>
+                <option>Invited</option>
+              </select>
+            </div>
+          </div>
+
+          <label class="checkbox"><input type="checkbox" checked> Send invite email</label>
+
+          <div class="card__footer">
+            <button class="btn btn-ghost" type="button">Cancel</button>
+            <button class="btn btn-primary" type="submit">Save user</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-card" aria-label="User list">
+        <div class="card__header">
+          <div>
+            <p class="eyebrow">Directory</p>
+            <h2>Users</h2>
+          </div>
+          <div class="actions-inline">
+            <a class="btn btn-ghost" href="#">Export</a>
+            <a class="btn btn-primary" href="#">Invite user</a>
+          </div>
+        </div>
+
+        <table class="table table--spacious">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Joined</th>
+              <th scope="col">Role</th>
+              <th scope="col">Status</th>
+              <th scope="col" class="actions-col"><span class="sr-only">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jane Doe</td>
+              <td>jane@example.com</td>
+              <td>Jan 12</td>
+              <td>Admin</td>
+              <td><span class="status status-success">Active</span></td>
+              <td>
+                <a class="btn btn-ghost" href="user-edit.html?id=jane-doe">Edit</a>
+                <a class="btn btn-ghost" href="user-delete.html?id=jane-doe&amp;action=suspend">Suspend</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Alex Smith</td>
+              <td>alex@example.com</td>
+              <td>Feb 03</td>
+              <td>Manager</td>
+              <td><span class="status status-info">Invited</span></td>
+              <td>
+                <a class="btn btn-ghost" href="user-detail.html?id=alex-smith&amp;action=resend">Resend invite</a>
+                <a class="btn btn-ghost" href="user-delete.html?id=alex-smith">Remove</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Sam Lee</td>
+              <td>sam@example.com</td>
+              <td>Mar 14</td>
+              <td>Customer</td>
+              <td><span class="status status-warning">Suspended</span></td>
+              <td>
+                <a class="btn btn-ghost" href="user-edit.html?id=sam-lee&amp;action=reactivate">Reactivate</a>
+                <a class="btn btn-ghost" href="user-delete.html?id=sam-lee">Remove</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

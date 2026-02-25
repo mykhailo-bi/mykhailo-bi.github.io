@@ -1,0 +1,70 @@
+@use "variables" as *;
+@use "mixins";
+
+.auth-page,
+.checkout,
+.account,
+.admin {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.auth-card,
+.checkout-card,
+.account-card,
+.admin-card {
+  @include mixins.card;
+  padding: 1.25rem;
+  width: 100%;
+}
+
+.admin-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  > .admin-card {
+    width: 100%;
+  }
+}
+
+.order-summary {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.checkout-steps {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.mini-table {
+  display: grid;
+  gap: 0.5rem;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  padding: 1rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 0.8rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid $color-border;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.stat {
+  @include mixins.card;
+  display: grid;
+  gap: 0.3rem;
+  padding: 1rem 1.25rem;
+}

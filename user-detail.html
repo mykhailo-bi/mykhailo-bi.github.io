@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Detail — Acme Commerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-user-detail">Search products</label>
+          <input id="search-user-detail" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="logout.html" class="btn btn-ghost">Logout</a>
+          <a href="cart.html" class="pill">Cart</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a href="users.html">Users</a>
+        <a class="active" href="user-detail.html">User detail</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section admin">
+    <header class="section__header">
+      <div>
+        <p class="eyebrow">User</p>
+        <h1>admin@example.com</h1>
+        <p class="muted">Admin · Active</p>
+      </div>
+      <div class="actions-inline">
+        <a class="btn btn-primary" href="user-edit.html">Edit</a>
+        <a class="btn btn-ghost" href="user-delete.html">Delete</a>
+      </div>
+    </header>
+
+    <section class="grid grid-2" style="align-items:start;">
+      <article class="card" aria-label="Profile">
+        <div class="card__header">Profile</div>
+        <p><strong>Email</strong><br> admin@example.com</p>
+        <p><strong>Role</strong><br> Admin</p>
+        <p><strong>Status</strong><br> Active</p>
+      </article>
+
+      <article class="card" aria-label="Meta">
+        <div class="card__header">Meta</div>
+        <p><strong>Created</strong><br> 2026-02-01</p>
+        <p><strong>Last login</strong><br> 2026-02-25 09:15</p>
+        <p><strong>Notes</strong><br> Full permissions.</p>
+      </article>
+    </section>
+
+    <section class="card" aria-label="Activity">
+      <div class="card__header">Recent activity</div>
+      <ul class="bullets">
+        <li>Updated product HD-123</li>
+        <li>Refunded order #AC-48190</li>
+        <li>Invited user alex@example.com</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

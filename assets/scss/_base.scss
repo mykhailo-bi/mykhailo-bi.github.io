@@ -1,0 +1,100 @@
+@use "variables" as *;
+@use "mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-family-base;
+  background: $color-bg;
+  color: $color-text;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba($color-primary, 0.08), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba($color-primary, 0.06), transparent 30%),
+    $color-bg;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $transition;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(100%, $container + 2 * $gutter);
+  margin: 0 auto;
+  padding: 0 $gutter;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+p {
+  margin: 0 0 0.75rem;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 0.4rem;
+  line-height: 1.25;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: $color-muted;
+}
+
+.muted {
+  color: $color-muted;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: $color-primary;
+  margin-bottom: 0.35rem;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.8rem;
+  background: rgba($color-primary, 0.16);
+  color: $color-text;
+  border-radius: 999px;
+  border: 1px solid rgba($color-primary, 0.35);
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.pill {
+  @include mixins.pill;
+}

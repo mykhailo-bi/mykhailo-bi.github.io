@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit User — Acme Commerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <div class="topbar container">
+        <a class="brand" href="index.html">Acme Commerce</a>
+        <form class="search" role="search">
+          <label class="sr-only" for="search-user-edit">Search products</label>
+          <input id="search-user-edit" type="search" name="q" placeholder="Search products" aria-label="Search products">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="top-actions">
+          <a href="logout.html" class="btn btn-ghost">Logout</a>
+          <a href="cart.html" class="pill">Cart</a>
+        </div>
+      </div>
+      <nav class="primary-nav container" aria-label="Primary">
+        <a href="users.html">Users</a>
+        <a class="active" href="user-edit.html">Edit user</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section admin">
+    <header class="section__header">
+      <div>
+        <p class="eyebrow">User</p>
+        <h1>Edit user</h1>
+        <p class="muted">admin@example.com</p>
+      </div>
+      <a class="btn btn-ghost" href="users.html">Back</a>
+    </header>
+
+    <section class="card" aria-label="Edit user form">
+      <div class="card__header">Profile</div>
+      <form class="stack" action="#">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" value="admin@example.com" required>
+        <label for="role">Role</label>
+        <select id="role" name="role">
+          <option selected>Admin</option>
+          <option>Regular</option>
+        </select>
+        <label class="checkbox"><input type="checkbox" checked> Active</label>
+        <div class="card__footer">
+          <button class="btn btn-primary" type="submit">Save</button>
+          <a class="btn btn-ghost" href="users.html">Cancel</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
