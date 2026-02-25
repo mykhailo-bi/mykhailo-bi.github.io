@@ -45,46 +45,42 @@
     </header>
 
     <div class="split" style="align-items:start;">
-      <section class="card" aria-label="Cart items">
-        <article class="card" style="padding:1rem;">
-          <div class="actions-inline" style="justify-content:space-between; width:100%;">
-            <div class="actions-inline">
-              <img src="https://picsum.photos/seed/headphones-cart/120" alt="Headphones" style="border-radius:10px;">
-              <div>
-                <h3>Noise-cancelling Headphones</h3>
-                <p class="muted">Color: Black · SKU: HD-123</p>
-                <p class="price">$199.00</p>
-                <div class="actions-inline">
-                  <a class="link-muted" href="#">Save for later</a>
-                  <a class="link-muted" href="#">Remove</a>
-                </div>
+      <section class="card cart-list" aria-label="Cart items">
+        <article class="card cart-item">
+          <div class="cart-item__info">
+            <img class="cart-item__image" src="https://picsum.photos/seed/headphones-cart/120" alt="Headphones">
+            <div class="cart-item__details">
+              <h3>Noise-cancelling Headphones</h3>
+              <p class="muted">Color: Black · SKU: HD-123</p>
+              <p class="price">$199.00</p>
+              <div class="cart-item__actions actions-inline">
+                <a class="link-muted" href="#">Save for later</a>
+                <a class="link-muted" href="#">Remove</a>
               </div>
             </div>
-            <div style="text-align:right; min-width:120px;">
-              <label class="stack-xxs" for="qty-1">Qty</label>
-              <input id="qty-1" type="number" value="1" min="1">
-            </div>
+          </div>
+          <div class="cart-item__qty">
+            <label class="stack-xxs" for="qty-1">Qty</label>
+            <input id="qty-1" type="number" value="1" min="1">
           </div>
         </article>
 
-        <article class="card" style="padding:1rem;">
-          <div class="actions-inline" style="justify-content:space-between; width:100%;">
-            <div class="actions-inline">
-              <img src="https://picsum.photos/seed/desk-lamp-cart/120" alt="Desk lamp" style="border-radius:10px;">
-              <div>
-                <h3>Smart Desk Lamp</h3>
-                <p class="muted">Color: White · SKU: DL-22</p>
-                <p class="price">$79.00</p>
-                <div class="actions-inline">
-                  <a class="link-muted" href="#">Save for later</a>
-                  <a class="link-muted" href="#">Remove</a>
-                </div>
+        <article class="card cart-item">
+          <div class="cart-item__info">
+            <img class="cart-item__image" src="https://picsum.photos/seed/desk-lamp-cart/120" alt="Desk lamp">
+            <div class="cart-item__details">
+              <h3>Smart Desk Lamp</h3>
+              <p class="muted">Color: White · SKU: DL-22</p>
+              <p class="price">$79.00</p>
+              <div class="cart-item__actions actions-inline">
+                <a class="link-muted" href="#">Save for later</a>
+                <a class="link-muted" href="#">Remove</a>
               </div>
             </div>
-            <div style="text-align:right; min-width:120px;">
-              <label class="stack-xxs" for="qty-2">Qty</label>
-              <input id="qty-2" type="number" value="2" min="1">
-            </div>
+          </div>
+          <div class="cart-item__qty">
+            <label class="stack-xxs" for="qty-2">Qty</label>
+            <input id="qty-2" type="number" value="2" min="1">
           </div>
         </article>
       </section>
