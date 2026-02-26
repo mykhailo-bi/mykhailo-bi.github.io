@@ -218,3 +218,46 @@
   display: grid;
   gap: 1rem;
 }
+
+// Featured bundle card in hero
+.hero__card {
+  .product-mini {
+    display: grid;
+    gap: 0.75rem;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    overflow: hidden;
+    box-shadow: $shadow-sm;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: $radius $radius 0 0;
+    }
+
+    > div {
+      padding: 0.9rem 1.05rem 1.15rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      background: rgba($color-primary, 0.15);
+      color: $color-primary;
+      font-weight: 700;
+      border: 1px solid rgba($color-primary, 0.35);
+      width: fit-content;
+    }
+
+    .actions-inline {
+      margin-top: 0.15rem;
+    }
+  }
+}

@@ -318,6 +318,42 @@ h1, h2, h3, h4 {
   gap: 1rem;
 }
 
+.hero__card .product-mini {
+  display: grid;
+  gap: 0.75rem;
+  background: #11131a;
+  border: 1px solid #1e2230;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+.hero__card .product-mini img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 14px 14px 0 0;
+}
+.hero__card .product-mini > div {
+  padding: 0.9rem 1.05rem 1.15rem;
+  display: grid;
+  gap: 0.45rem;
+}
+.hero__card .product-mini .label {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+  font-weight: 700;
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  width: fit-content;
+}
+.hero__card .product-mini .actions-inline {
+  margin-top: 0.15rem;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
